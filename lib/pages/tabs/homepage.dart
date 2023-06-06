@@ -22,7 +22,7 @@ class _MyHomePageState extends State<MyHomePage> {
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Color(0xff182545),
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: Colors.black,
+        selectedItemColor: Colors.white,
         showUnselectedLabels: false,
         currentIndex: _currentIndex,
         items: [
