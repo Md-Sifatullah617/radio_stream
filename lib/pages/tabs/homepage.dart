@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:radio_stream/pages/others/radio_screen.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({super.key});
@@ -11,7 +12,7 @@ class _MyHomePageState extends State<MyHomePage> {
   int _currentIndex = 0;
 
   final List<Widget> bottomNavPages = [
-    const Text("Home"),
+    RadioScreen(),
     const Text("Search"),
   ];
 

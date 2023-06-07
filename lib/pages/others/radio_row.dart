@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:radio_stream/services/models/radio_model.dart';
+import 'package:radio_stream/widgets/global/image_data.dart';
 
 class RadioRowExample extends StatefulWidget {
   const RadioRowExample({super.key, required this.radioModel});
@@ -26,6 +27,7 @@ class _RadioRowExampleState extends State<RadioRowExample> {
         maxLines: 2,
       ),
       trailing: Wrap(
+        spacing: -10,
         children: [
           playResumeButton(),
           addFavouriteIcon(),
@@ -34,23 +36,6 @@ class _RadioRowExampleState extends State<RadioRowExample> {
     );
   }
 
-  Widget imageData(url, {size}) {
-    return Container(
-      height: size ?? 55,
-      width: size ?? 55,
-      decoration: BoxDecoration(
-          color: Color(0xffffe5ec),
-          borderRadius: BorderRadius.all(Radius.circular(10)),
-          boxShadow: [
-            BoxShadow(
-                color: Colors.grey.withOpacity(0.5),
-                spreadRadius: 1,
-                blurRadius: 3,
-                offset: Offset(0, 3))
-          ]),
-      child: Image.network(url),
-    );
-  }
 
   Widget playResumeButton() {
     return IconButton(onPressed: () {}, icon: Icon(Icons.play_circle_fill));
