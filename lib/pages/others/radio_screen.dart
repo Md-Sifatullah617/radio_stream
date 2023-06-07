@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:radio_stream/pages/others/radio_row.dart';
 import 'package:radio_stream/services/models/radio_model.dart';
-
+import 'package:radio_stream/widgets/global/app_logo.dart';
 import 'now_playing_radio.dart';
 
 class RadioScreen extends StatelessWidget {
@@ -17,13 +17,16 @@ class RadioScreen extends StatelessWidget {
     return Container(
       child: Column(
         children: [
-            RadioRowExample(radioModel: radioModel),
-            RadioRowExample(radioModel: radioModel),
-            RadioRowExample(radioModel: radioModel),
-
-            NowPlayingRadio(radioImage: radioModel.radioPic, radioTitle: radioModel.radioName)
+          appLogo(),
+          RadioRowExample(radioModel: radioModel),
+          RadioRowExample(radioModel: radioModel),
+          RadioRowExample(radioModel: radioModel),
+          NowPlayingRadio(
+              radioImage: radioModel.radioPic, radioTitle: radioModel.radioName)
         ],
       ),
     );
   }
+
+  
 }
