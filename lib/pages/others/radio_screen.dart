@@ -42,7 +42,7 @@ class RadioScreen extends StatelessWidget {
                   return Divider();
                 },
                 shrinkWrap: true,
-                physics: ScrollPhysics(),
+                physics: BouncingScrollPhysics(),
                 itemCount: 10)
           ],
         ),
